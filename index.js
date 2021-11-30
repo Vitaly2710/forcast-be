@@ -36,5 +36,5 @@ app.listen(process.env.PORT || port, () => {
 
 
 setInterval(function () {
-  http.get("https://forecast-be.herokuapp.com/");
+  http.get("https://forecast-be.herokuapp.com");
 }, 300000);
