@@ -32,3 +32,7 @@ app.get('/weather', async (req, res) => {
 app.listen(process.env.PORT || port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
+
+setInterval(function () {
+  http.get("https://forecast-be.herokuapp.com");
+}, 300000);
