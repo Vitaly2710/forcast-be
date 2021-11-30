@@ -2,6 +2,7 @@ const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
 const app = express();
+const http = require("http");
 const port = 4000;
 
 app.use(cors());
@@ -31,5 +32,9 @@ app.get('/weather', async (req, res) => {
 
 app.listen(process.env.PORT || port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
-})
+});
 
+
+setInterval(function () {
+  http.get("https://forecast-be.herokuapp.com/");
+}, 300000);
