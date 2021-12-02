@@ -27,7 +27,7 @@ app.get('/weather', async (req, res) => {
   } else {
     res.status(400).json('Wrong data input');
    
-  }
+  };
 })
 
 app.listen(process.env.PORT || port, () => {
